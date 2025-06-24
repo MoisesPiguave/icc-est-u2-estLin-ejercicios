@@ -72,13 +72,13 @@ public class LogicaClasificacion {
     Stack<Integer> st = new Stack<>();
 
     while (!pila.isEmpty()) {
-        int temp = pila.pop();
+        int tp = pila.pop();
 
-        while (!st.isEmpty() && st.peek() > temp) {
+        while (!st.isEmpty() && st.peek() > tp) {
             pila.push(st.pop());
         }
 
-        st.push(temp);
+        st.push(tp);
     }
 
     List<Integer> resultado = new ArrayList<>();
